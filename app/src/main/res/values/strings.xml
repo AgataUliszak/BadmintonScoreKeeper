@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">BadmintonScoreKeeper</string>
+    <string name="set">SET</string>
+    <string name="one">1</string>
+    <string name="zero">0</string>
+    <string name="set1">SET 1</string>
+    <string name="set2">SET 2</string>
+    <string name="set3">SET 3</string>
+    <string name="playerA">Player A</string>
+    <string name="playerB">Player B</string>
+    <string name="score">Score</string>
+    <string name="setWinnerMessage">The winner is ...</string>
+    <string name="gameWinnerMessage">cos</string>
+    <string name="nextSet">next set</string>
+    <string name="reset">new game</string>
 </resources>

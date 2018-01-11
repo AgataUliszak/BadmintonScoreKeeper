@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     int scoreSet3PlayerB = 0;
     String winMessage = "The winner is ...";
     String gameWinnerMessage = "";
+
     TextView viewScorePlayerA;
     TextView viewScorePlayerB;
     TextView viewNumberOfSet;
@@ -27,36 +28,41 @@ public class MainActivity extends AppCompatActivity {
     TextView viewScoreSet2PlayerB;
     TextView viewScoreSet3PlayerA;
     TextView viewScoreSet3PlayerB;
-
+    TextView setWinnerTextView;
+    TextView gameWinnerTextView;
     Button buttonScoreA;
     Button buttonScoreB;
     Button setButton;
     Button resetButton;
 
+    static final String SCORE_PlAYER_A ="scorePlayerA";
+    static final String SCORE_PlAYER_B ="scorePlayerB";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        viewScorePlayerA =(TextView) findViewById(R.id.player_a_score);
-        viewScorePlayerB =(TextView) findViewById(R.id.player_b_score);
-        viewNumberOfSet=(TextView) findViewById(R.id.text_2);
-        viewScoreSet1PlayerA=(TextView) findViewById(R.id.playerA_set1);
-        viewScoreSet1PlayerB=(TextView) findViewById(R.id.playerB_set1);
-        viewScoreSet2PlayerA=(TextView) findViewById(R.id.playerA_set2);
-        viewScoreSet2PlayerB=(TextView) findViewById(R.id.playerB_set2);
-        viewScoreSet3PlayerA=(TextView) findViewById(R.id.playerA_set3);
-        viewScoreSet3PlayerB=(TextView) findViewById(R.id.playerB_set3);
-        buttonScoreA= (Button) findViewById(R.id.button_score_a);
-        buttonScoreB= (Button) findViewById(R.id.button_score_b);
-        setButton=(Button) findViewById(R.id.set_button);
-        resetButton=(Button) findViewById(R.id.reset_button);
+        setWinnerTextView = findViewById(R.id.text_winner);
+        gameWinnerTextView =  findViewById(R.id.game_winner);
+        viewScorePlayerA = findViewById(R.id.player_a_score);
+        viewScorePlayerB = findViewById(R.id.player_b_score);
+        viewNumberOfSet= findViewById(R.id.text_2);
+        viewScoreSet1PlayerA= findViewById(R.id.playerA_set1);
+        viewScoreSet1PlayerB= findViewById(R.id.playerB_set1);
+        viewScoreSet2PlayerA= findViewById(R.id.playerA_set2);
+        viewScoreSet2PlayerB= findViewById(R.id.playerB_set2);
+        viewScoreSet3PlayerA= findViewById(R.id.playerA_set3);
+        viewScoreSet3PlayerB= findViewById(R.id.playerB_set3);
+        buttonScoreA= findViewById(R.id.button_score_a);
+        buttonScoreB= findViewById(R.id.button_score_b);
+        setButton= findViewById(R.id.set_button);
+        resetButton= findViewById(R.id.reset_button);
     }
 
     @Override
     protected void onSaveInstanceState(Bundle savedInstanceState) {
-        savedInstanceState.putInt("scorePlayerA", scorePlayerA);
-        savedInstanceState.putInt("scorePlayerB", scorePlayerB);
+        savedInstanceState.putInt(SCORE_PlAYER_A, scorePlayerA);
+        savedInstanceState.putInt(SCORE_PlAYER_B, scorePlayerB);
         savedInstanceState.putInt("numberOfSet", numberOfSet);
         savedInstanceState.putInt("scoreSet1PlayerA", scoreSet1PlayerA);
         savedInstanceState.putInt("scoreSet1PlayerB", scoreSet1PlayerB);
@@ -64,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putInt("scoreSet2PlayerB", scoreSet2PlayerB);
         savedInstanceState.putInt("scoreSet3PlayerA", scoreSet3PlayerA);
         savedInstanceState.putInt("scoreSet3PlayerB", scoreSet3PlayerB);
+        savedInstanceState.putString("winMessage", winMessage);
+        savedInstanceState.putString("gameWinnerMessage", gameWinnerMessage);
         super.onSaveInstanceState(savedInstanceState);
     }
 
@@ -80,6 +88,19 @@ public class MainActivity extends AppCompatActivity {
             scoreSet2PlayerB = savedInstanceState.getInt("scoreSet2PlayerB");
             scoreSet3PlayerA = savedInstanceState.getInt("scoreSet3PlayerA");
             scoreSet3PlayerB = savedInstanceState.getInt("scoreSet3PlayerB");
+            winMessage = savedInstanceState.getString("winMessage");
+            gameWinnerMessage = savedInstanceState.getString("gameWinnerMessage");
+            displayForPlayerA(scorePlayerA);
+            displayForPlayerB(scorePlayerB);
+            displayNumberOfSets(numberOfSet);
+            displaySet1ForPlayerA(scoreSet1PlayerA);
+            displaySet1ForPlayerB(scoreSet1PlayerB);
+            displaySet2ForPlayerA(scoreSet2PlayerA);
+            displaySet2ForPlayerB(scoreSet2PlayerB);
+            displaySet3ForPlayerA(scoreSet3PlayerA);
+            displaySet3ForPlayerB(scoreSet3PlayerB);
+            displayWinner(winMessage);
+            displayGameWinner(gameWinnerMessage);
         }
     }
 
@@ -215,78 +236,67 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Player A.
      */
     private void displayForPlayerA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.player_a_score);
-        scoreView.setText(String.valueOf(score));
+        viewScorePlayerA.setText(String.valueOf(score));
     }
     /**
      * Displays the given score for Player A.
      */
     private void displayForPlayerB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.player_b_score);
-        scoreView.setText(String.valueOf(score));
+        viewScorePlayerB.setText(String.valueOf(score));
     }
     /**
      * Displays the number of set.
      */
     private void displayNumberOfSets(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.text_2);
-        scoreView.setText(String.valueOf(score));
+        viewNumberOfSet.setText(String.valueOf(score));
     }
     /**
      * Displays winner of the set.
      */
     private void displayWinner(String winner) {
-        TextView winnerTextView = (TextView) findViewById(R.id.text_winner);
-        winnerTextView.setText(winner);
+        setWinnerTextView.setText(winner);
     }
     /**
      * Displays winner of the game.
      */
     private void displayGameWinner(String winner) {
-        TextView winnerTextView = (TextView) findViewById(R.id.game_winner);
-        winnerTextView.setText(winner);
+        gameWinnerTextView.setText(winner);
     }
 
     /**
      * Displays the given score for Player A in set 1.
      */
     private void displaySet1ForPlayerA (int score) {
-        TextView scoreView = (TextView) findViewById(R.id.playerA_set1);
-        scoreView.setText(String.valueOf(score));
+        viewScoreSet1PlayerA.setText(String.valueOf(score));
     }
     /**
      * Displays the given score for Player A in set 2.
      */
     private void displaySet2ForPlayerA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.playerA_set2);
-        scoreView.setText(String.valueOf(score));
+        viewScoreSet2PlayerA.setText(String.valueOf(score));
     }
     /**
      * Displays the given score for Player A in set 3.
      */
     private void displaySet3ForPlayerA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.playerA_set3);
-        scoreView.setText(String.valueOf(score));
+        viewScoreSet3PlayerA.setText(String.valueOf(score));
     }
     /**
      * Displays the given score for Player B in set 1.
      */
     private void displaySet1ForPlayerB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.playerB_set1);
-        scoreView.setText(String.valueOf(score));
+        viewScoreSet1PlayerB.setText(String.valueOf(score));
     }
     /**
      * Displays the given score for Player B in set 2.
      */
     private void displaySet2ForPlayerB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.playerB_set2);
-        scoreView.setText(String.valueOf(score));
+        viewScoreSet2PlayerB.setText(String.valueOf(score));
     }
     /**
      * Displays the given score for Player B in set 3.
      */
     private void displaySet3ForPlayerB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.playerB_set3);
-        scoreView.setText(String.valueOf(score));
+        viewScoreSet3PlayerB.setText(String.valueOf(score));
     }
 }
