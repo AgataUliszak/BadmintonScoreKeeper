@@ -1,5 +1,6 @@
 package com.example.android.badmintonscorekeeper;
 
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     Button buttonScoreB;
     Button setButton;
     Button resetButton;
+    View backgroundImage;
 
     static final String SCORE_PlAYER_A ="scorePlayerA";
     static final String SCORE_PlAYER_B ="scorePlayerB";
@@ -132,6 +134,9 @@ public class MainActivity extends AppCompatActivity {
      * Increase the number of sets, reset points of Player A and Player B, check if game is over (then increasing is impossible).
      */
     public void newSet(View view) {
+        if (numberOfSet==1){
+            if (winMessage == "The winner is ...") return;
+        }
         if (numberOfSet == 2) {
             if (scoreSet1PlayerA>scoreSet1PlayerB && scoreSet2PlayerA>scoreSet2PlayerB || scoreSet1PlayerB>scoreSet1PlayerA && scoreSet2PlayerB>scoreSet2PlayerA){
                 gameOver();

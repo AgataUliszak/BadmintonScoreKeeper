@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_width="match_parent"
     android:fillViewport="true">
-
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
 
     <ImageView
         android:layout_width="match_parent"
@@ -65,7 +62,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="2dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -162,7 +159,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignTop="@+id/linearLayout2"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:padding="0dp"
@@ -194,7 +191,7 @@
             android:layout_width="2dp"
             android:layout_height="match_parent"
             android:layout_marginTop="95dp"
-            android:layout_marginBottom="35dp"
+            android:layout_marginBottom="48dp"
             android:background="@android:color/white" />
 
         <LinearLayout
@@ -207,7 +204,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="2dp">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -293,7 +290,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:padding="0dp"
@@ -328,7 +325,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/set_button"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="18dp"
         android:fontFamily="sans-serif-light"
         android:gravity="center_horizontal"
         android:text="@string/gameWinnerMessage"
@@ -341,7 +338,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout"
         android:fontFamily="sans-serif-light"
-        android:layout_marginTop="-10dp"
+        android:layout_marginTop="-13dp"
         android:gravity="center_horizontal"
         android:text="@string/setWinnerMessage"
         android:textColor="#000000"
@@ -372,4 +369,3 @@
         android:onClick="resetScore"
         android:text="@string/reset" />
 </RelativeLayout>
-</ScrollView>

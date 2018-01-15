@@ -10,7 +10,7 @@
     <string name="playerB">Player B</string>
     <string name="score">Score</string>
     <string name="setWinnerMessage">The winner is ...</string>
-    <string name="gameWinnerMessage">cos</string>
+    <string name="gameWinnerMessage"></string>
     <string name="nextSet">next set</string>
     <string name="reset">new game</string>
 </resources>
