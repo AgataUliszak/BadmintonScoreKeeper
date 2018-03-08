@@ -8,10 +8,75 @@
         <item name="colorButtonNormal">#FF9800</item>
     </style>
 
-    <style name="TextStyle1" parent="@android:style/TextAppearance">
-        <item name="android:textColor">#000000</item>
-        <item name="android:textSize">24dp</item>
+    <style name="TextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
+    <style name="ImageStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:alpha">0.75</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="mainWrap" parent="TextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="mainMix" parent="TextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextViewStyle1" parent="mainWrap">
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextViewStyle2" parent="mainWrap">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextViewStyle3" parent="mainWrap">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextViewStyle4" parent="mainMix">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextViewStyle5" parent="mainMix">
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">56sp</item>
+    </style>
+
+    <style name="TextViewStyle6" parent="mainMix">
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="TextViewStyle7" >
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ButtonStyle1" parent="mainMix">
+        <item name="android:layout_marginBottom">38dp</item>
+        <item name="android:layout_marginLeft">24dp</item>
+        <item name="android:layout_marginRight">24dp</item>
+        <item name="android:text">Score</item>
+    </style>
 </resources>

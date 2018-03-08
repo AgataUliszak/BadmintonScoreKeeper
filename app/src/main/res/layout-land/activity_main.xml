@@ -8,13 +8,7 @@
     android:fillViewport="true">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:alpha="0.75"
-        android:scaleType="centerCrop"
+        style="@style/ImageStyle"
         android:src="@drawable/badminton" />
 
     <LinearLayout
@@ -30,7 +24,7 @@
             android:layout_height="wrap_content"
             android:padding="6dp"
             android:text="@string/set"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="18sp" />
 
         <TextView
@@ -40,7 +34,7 @@
             android:layout_toRightOf="@id/text_1"
             android:padding="8dp"
             android:text="@string/one"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="18sp" />
     </LinearLayout>
 
@@ -72,22 +66,14 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="0dp"
                         android:text="@string/set1"
-                        android:textColor="@android:color/black"
-                        android:textSize="16dp" />
+                        style="@style/TextViewStyle2"
+                        android:layout_marginLeft="0dp" />
 
                     <TextView
                         android:id="@+id/playerA_set1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:text="@string/zero"
-                        android:textColor="@android:color/black"
-                        android:textSize="18dp" />
+                        style="@style/TextViewStyle3" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -97,21 +83,13 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:text="@string/set2"
-                        android:textColor="@android:color/black"
-                        android:textSize="16dp" />
+                        style="@style/TextViewStyle2" />
 
                     <TextView
                         android:id="@+id/playerA_set2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:text="@string/zero"
-                        android:textColor="@android:color/black"
-                        android:textSize="18dp" />
+                        style="@style/TextViewStyle2" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -121,21 +99,13 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:text="@string/set3"
-                        android:textColor="@android:color/black"
-                        android:textSize="16dp" />
+                        style="@style/TextViewStyle2" />
 
                     <TextView
-                        android:id="@+id/playerA_set3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:text="@string/zero"
-                        android:textColor="@android:color/black"
-                        android:textSize="18dp" />
+                        android:id="@+id/playerA_set3"
+                        style="@style/TextViewStyle3"/>
                 </LinearLayout>
 
                 <View
@@ -154,29 +124,19 @@
                 android:background="@android:color/white" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:text="@string/playerA"
+                style="@style/TextViewStyle4"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignTop="@+id/linearLayout2"
                 android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center_horizontal"
-                android:padding="0dp"
-                android:text="@string/playerA"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                android:padding="0dp" />
 
             <TextView
+                style="@style/TextViewStyle7"
                 android:id="@+id/player_a_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginBottom="0dp"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center_horizontal"
-                android:text="@string/zero"
-                android:textColor="#000000"
-                android:textSize="40dp" />
+                android:text="@string/zero" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -213,21 +173,13 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:text="@string/set1"
-                        android:textColor="@android:color/black"
-                        android:textSize="16dp" />
+                        style="@style/TextViewStyle2"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:text="@string/zero"
                         android:id="@+id/playerB_set1"
-                        android:textColor="@android:color/black"
-                        android:textSize="18dp" />
+                        style="@style/TextViewStyle3" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -237,21 +189,13 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:text="@string/set2"
-                        android:textColor="@android:color/black"
-                        android:textSize="16dp" />
+                        style="@style/TextViewStyle2"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:text="@string/zero"
                         android:id="@+id/playerB_set2"
-                        android:textColor="@android:color/black"
-                        android:textSize="18dp" />
+                        style="@style/TextViewStyle3" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -261,21 +205,13 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:text="@string/set3"
-                        android:textColor="@android:color/black"
-                        android:textSize="16dp" />
+                        style="@style/TextViewStyle2"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:text="@string/zero"
                         android:id="@+id/playerB_set3"
-                        android:textColor="@android:color/black"
-                        android:textSize="18dp" />
+                        style="@style/TextViewStyle3" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -288,26 +224,16 @@
                 android:background="@android:color/white" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/TextViewStyle4"
                 android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center_horizontal"
                 android:padding="0dp"
-                android:text="@string/playerB"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                android:text="@string/playerB" />
 
             <TextView
+                style="@style/TextViewStyle7"
                 android:id="@+id/player_b_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginBottom="0dp"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center_horizontal"
-                android:text="@string/zero"
-                android:textColor="#000000"
-                android:textSize="40dp" />
+                android:text="@string/zero" />
 
             <Button
                 android:layout_width="wrap_content"

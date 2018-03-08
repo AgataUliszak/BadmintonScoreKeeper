@@ -183,7 +183,10 @@ public class MainActivity extends AppCompatActivity {
         displayGameWinner(gameWinnerMessage);
     }
     /**
-     * Adding  score for Player A.
+     * Adding  score for Player A. The winner of the set is the player who first reach
+     * 21 points. In case that two of the players have 20 points each, they are playing
+     * until one of them reach 2 points more (when the result is 29:29 it's enough to get one
+     * point more).
      */
     public void addOnePointA(View v) {
         if (winMessage == "The winner is ...") {
