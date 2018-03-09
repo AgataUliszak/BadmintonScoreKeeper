@@ -33,40 +33,43 @@
     </style>
 
     <style name="TextViewStyle1" parent="mainWrap">
-        <item name="android:padding">8dp</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:padding">@dimen/padding_8</item>
+        <item name="android:textSize">@dimen/text_size_24</item>
     </style>
 
     <style name="TextViewStyle2" parent="mainWrap">
         <item name="android:layout_gravity">center</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
     </style>
 
     <style name="TextViewStyle3" parent="mainWrap">
         <item name="android:layout_gravity">center</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
     </style>
 
     <style name="TextViewStyle4" parent="mainMix">
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/text_size_20</item>
     </style>
 
-    <style name="TextViewStyle5" parent="mainMix">
-        <item name="android:layout_marginBottom">20dp</item>
+    <style name="TextViewStyle5">
+        <item name="android:layout_marginBottom">@dimen/margin_20</item>
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:textSize">56sp</item>
+        <item name="android:textSize">@dimen/text_size_56</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
     <style name="TextViewStyle6" parent="mainMix">
-        <item name="android:layout_marginBottom">2dp</item>
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:textSize">22sp</item>
+        <item name="android:textSize">@dimen/text_size_22</item>
     </style>
 
     <style name="TextViewStyle7" >
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:textSize">40sp</item>
+        <item name="android:textSize">@dimen/text_size_40</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:layout_width">match_parent</item>
@@ -74,9 +77,15 @@
     </style>
 
     <style name="ButtonStyle1" parent="mainMix">
-        <item name="android:layout_marginBottom">38dp</item>
-        <item name="android:layout_marginLeft">24dp</item>
-        <item name="android:layout_marginRight">24dp</item>
-        <item name="android:text">Score</item>
+        <item name="android:layout_marginBottom">@dimen/margin_38</item>
+        <item name="android:layout_marginLeft">@dimen/margin_24</item>
+        <item name="android:layout_marginRight">@dimen/margin_24</item>
+        <item name="android:text">@string/score</item>
+    </style>
+
+    <style name="ButtonStyle2" parent="mainWrap">
+        <item name="android:layout_marginBottom">@dimen/margin_38</item>
+        <item name="android:text">@string/score</item>
+        <item name="android:layout_gravity">center</item>
     </style>
 </resources>

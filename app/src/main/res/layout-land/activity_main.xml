@@ -9,33 +9,30 @@
 
     <ImageView
         style="@style/ImageStyle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:src="@drawable/badminton" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/margin_50"
         android:gravity="center"
         android:id="@+id/linearLayout2">
 
         <TextView
+            style="@style/TextViewStyle3"
             android:id="@+id/text_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="6dp"
-            android:text="@string/set"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:padding="@dimen/padding_6"
+            android:text="@string/set" />
 
         <TextView
             android:id="@+id/text_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/TextViewStyle3"
             android:layout_toRightOf="@id/text_1"
-            android:padding="8dp"
-            android:text="@string/one"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:padding="@dimen/padding_8"
+            android:text="@string/one" />
     </LinearLayout>
 
     <LinearLayout
@@ -56,7 +53,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="@dimen/margin_2"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -67,8 +64,7 @@
 
                     <TextView
                         android:text="@string/set1"
-                        style="@style/TextViewStyle2"
-                        android:layout_marginLeft="0dp" />
+                        style="@style/TextViewStyle2" />
 
                     <TextView
                         android:id="@+id/playerA_set1"
@@ -135,23 +131,18 @@
             <TextView
                 style="@style/TextViewStyle7"
                 android:id="@+id/player_a_score"
-                android:layout_marginBottom="0dp"
                 android:text="@string/zero" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="38dp"
-                android:onClick="addOnePointA"
-                android:text="@string/score" />
+                style="@style/ButtonStyle2"
+                android:onClick="addOnePointA"/>
         </LinearLayout>
 
         <View
             android:layout_width="2dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="95dp"
-            android:layout_marginBottom="48dp"
+            android:layout_marginTop="@dimen/margin_95"
+            android:layout_marginBottom="@dimen/margin_48"
             android:background="@android:color/white" />
 
         <LinearLayout
@@ -164,7 +155,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="2dp">
+                android:layout_marginTop="@dimen/margin_2">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -219,57 +210,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_marginTop="3dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_marginRight="@dimen/margin_15"
                 android:background="@android:color/white" />
 
             <TextView
                 style="@style/TextViewStyle4"
-                android:layout_marginTop="10dp"
-                android:padding="0dp"
+                android:layout_marginTop="@dimen/margin_10"
                 android:text="@string/playerB" />
 
             <TextView
                 style="@style/TextViewStyle7"
                 android:id="@+id/player_b_score"
-                android:layout_marginBottom="0dp"
                 android:text="@string/zero" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="38dp"
-                android:layout_gravity="center"
-                android:onClick="addOnePointB"
-                android:text="@string/score" />
+                style="@style/ButtonStyle2"
+                android:onClick="addOnePointB" />
 
         </LinearLayout>
 
     </LinearLayout>
     <TextView
+        style="@style/TextViewStyle6"
         android:id="@+id/game_winner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_above="@id/set_button"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="@dimen/margin_18"
         android:fontFamily="sans-serif-light"
-        android:gravity="center_horizontal"
         android:text="@string/gameWinnerMessage"
-        android:textColor="#000000"
-        android:textSize="22dp"
         android:textStyle="bold" />
     <TextView
         android:id="@+id/text_winner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/TextViewStyle6"
         android:layout_below="@+id/linearLayout"
         android:fontFamily="sans-serif-light"
-        android:layout_marginTop="-13dp"
-        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_13"
         android:text="@string/setWinnerMessage"
-        android:textColor="#000000"
-        android:textSize="22dp"
         android:textStyle="bold" />
+
     <Button
         android:id="@+id/set_button"
         android:layout_width="wrap_content"
@@ -277,8 +255,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/linearLayout"
-        android:layout_marginLeft="99dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/margin_105"
+        android:layout_marginTop="@dimen/margin_10"
         android:onClick="newSet"
         android:text="@string/nextSet" />
 
@@ -290,8 +268,8 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/linearLayout"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="98dp"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_105"
         android:onClick="resetScore"
         android:text="@string/reset" />
 </RelativeLayout>

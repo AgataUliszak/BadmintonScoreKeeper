@@ -131,7 +131,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Increase the number of sets, reset points of Player A and Player B, check if game is over (then increasing is impossible).
+     * Increase the number of sets, reset points of Player A and Player B, check if game is over
+     * (then increasing is impossible).
      */
     public void newSet(View view) {
         if (numberOfSet==1){
