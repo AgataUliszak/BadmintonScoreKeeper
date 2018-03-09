@@ -135,7 +135,8 @@
 
             <Button
                 style="@style/ButtonStyle2"
-                android:onClick="addOnePointA"/>
+                android:id="@+id/button_score_a"
+                android:onClick="addPoint"/>
         </LinearLayout>
 
         <View
@@ -226,7 +227,8 @@
 
             <Button
                 style="@style/ButtonStyle2"
-                android:onClick="addOnePointB" />
+                android:id="@+id/button_score_b"
+                android:onClick="addPoint" />
 
         </LinearLayout>
 

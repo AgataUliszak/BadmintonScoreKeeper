@@ -189,6 +189,8 @@ public class MainActivity extends AppCompatActivity {
      * until one of them reach 2 points more (when the result is 29:29 it's enough to get one
      * point more).
      */
+
+
     public void addOnePointA(View v) {
         if (winMessage == "The winner is ...") {
             scorePlayerA += 1;
@@ -216,6 +218,18 @@ public class MainActivity extends AppCompatActivity {
             displayWinner(winMessage);
             displayPoints();
             gameOver();
+        }
+    }
+    /**
+     * General method which adding points for players.
+     */
+    public void addPoint (View v) {
+        int id=v.getId();
+        if (id==R.id.button_score_a){
+            addOnePointA(v);
+        }
+        else if (id==R.id.button_score_b){
+            addOnePointB(v);
         }
     }
 
